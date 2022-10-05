@@ -8,6 +8,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
             filename: 'bundle.js',
             path: path.resolve(__dirname, 'dist'),
         },
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: './index.html',
+                title: 'Webpack Plugin',
+            })
+            ],
         module: {
             rules: [
                 {
@@ -31,12 +37,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
             }
             }
         ]
-        },
-        plugins: [
-            new HtmlWebpackPlugin({
-                template: './index.html',
-                title: 'Webpack Plugin',
-            })
-            ]
-}
+        }
+};
 
